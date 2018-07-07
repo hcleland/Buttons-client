@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ButtonsClient</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <p><a href="/client/buttons">Home Page</a></p>
+    <% flash.each do |name, message| %>
+      <h1><%= message %></h1>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

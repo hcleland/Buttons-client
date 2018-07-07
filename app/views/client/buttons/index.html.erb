@@ -1,0 +1,14 @@
+<a href="/client/buttons/new">Add a new button</a>
+
+
+
+<% @buttons.each do |button| %>
+  <p>title: <a href="/client/buttons/<%= button['id'] %>"><%= button['shape'] %></a></p>
+  <p>id: <%= button['id'] %></p>
+  <p>color: <%= button['color'] %></p>
+  <p>description: <%= button['description'] %></p>
+  <p>image_url: <%= button['image_url'] %></p>
+  <hr>
+<% end %>
+
+<%= button_to "New User", "/client/buttons", method: :get %>
